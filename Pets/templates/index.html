@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LinQ</title>
+</head>
+<body>
+<h1>Prueba practica LinQ</h1>
+<a href="/publish">Publicar foto de mascota</a>
+{% for pet in pets %}
+    <h2>{{ pet.name }}</h2>
+    <p>{{ pet.owner.nickname }}</p>
+    <img src="media/{{ pet.picture }}">
+    <small>{{ pet.votes }}</small>
+{% endfor %}
+</body>
+</html>

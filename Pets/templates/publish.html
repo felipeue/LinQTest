@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LinQ</title>
+</head>
+<body>
+<h1>Prueba practica LinQ</h1>
+
+        <form id="category_form" method="post" action="/publish/">
+
+            {% csrf_token %}
+           <p> Nickname de usuario: {{ owner_form.nickname }}</p><br>
+            <p>Nombre mascota: {{ pet_form.name }}</p><br>
+            <p>Subir imagen{{ pet_form.picture }}</p>
+
+            <input type="submit" name="submit" value="Subir foto" />
+        </form>
+
+<a href="/">Volver</a>
+</body>
+</html>
