@@ -10,8 +10,9 @@
 {% for pet in pets %}
     <h2>{{ pet.name }}</h2>
     <p>{{ pet.owner.nickname }}</p>
-    <img src="media/{{ pet.picture }}">
-    <small>{{ pet.votes }}</small>
+    <img src="media/{{ pet.picture }}"><br>
+    <p>Votos:</p><small>{{ pet.votes }}</small><br>
+    <a href="/vote/{{ pet.id }}">Votar</a>
 {% endfor %}
 </body>
 </html>
